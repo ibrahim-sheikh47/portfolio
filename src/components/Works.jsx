@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import StarWrapper from "../hoc/SectionWrapper";
-import { fadeIn, textVariant } from "../utils/motion";
 import { ProjectDialog } from "./ProjectDialog";
 import { landingPages, projects } from "../constants";
 
@@ -21,12 +18,11 @@ const ProjectCard = ({
   isLandingPage,
 }) => {
   return (
-    <motion.div
-      variants={fadeIn("up", "spring", Math.min(index * 0.1, 0.3), 0.5)}
+    <div
       onClick={isLandingPage ? () => window.open(live_link, "_blank") : onClick}
       className="w-full sm:w-[360px]"
     >
-      <div className="bg-tertiary p-5 rounded-2xl w-full cursor-pointer hover:shadow-2xl transition-all duration-300 h-auto md:h-[520px] relative hover:scale-[1.02] transform-gpu">
+      <div className="bg-tertiary p-5 rounded-2xl w-full cursor-pointer hover:shadow-2xl transition-all duration-100 h-auto md:h-[520px] relative hover:scale-[1.005] transform-gpu will-change-transform">
         {/* Project Image */}
         <div className="relative w-full h-[200px] sm:h-[230px]">
           <img
@@ -39,9 +35,8 @@ const ProjectCard = ({
             loading="lazy"
           />
 
-          {/* Hover Overlay only for Landing Pages */}
           {isLandingPage && (
-            <div className="absolute inset-0 bg-black bg-opacity-60 rounded-2xl flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 bg-black bg-opacity-60 rounded-2xl flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-100">
               <span className="text-white font-semibold text-lg">
                 Click to View
               </span>
@@ -70,7 +65,7 @@ const ProjectCard = ({
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -85,31 +80,27 @@ const Works = () => {
 
   const closeDialog = () => {
     setIsDialogOpen(false);
-    setTimeout(() => setSelectedProject(null), 300);
+    setTimeout(() => setSelectedProject(null), 100);
   };
 
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-      </motion.div>
+      </div>
 
       <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[16px] sm:text-[17px] max-w-3xl leading-[28px] sm:leading-[30px]"
-        >
+        <p className="mt-3 text-secondary text-[16px] sm:text-[17px] max-w-3xl leading-[28px] sm:leading-[30px]">
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
           links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work with different technologies,
           and manage projects effectively.
-        </motion.p>
+        </p>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-5 justify-center sm:justify-start">
-        {/* Normal Projects */}
         {projects?.length > 0 &&
           projects.map((project, index) => (
             <ProjectCard
@@ -121,7 +112,6 @@ const Works = () => {
             />
           ))}
 
-        {/* Landing Pages Section */}
         {landingPages?.length > 0 && (
           <>
             <div className="w-full mt-10">
@@ -140,7 +130,6 @@ const Works = () => {
         )}
       </div>
 
-      {/* Project Dialog */}
       <ProjectDialog
         project={selectedProject}
         isOpen={isDialogOpen}

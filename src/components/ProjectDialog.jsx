@@ -6,17 +6,17 @@ import { motion, AnimatePresence } from "framer-motion";
 export const ProjectDialog = ({ project, isOpen, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imageHeight, setImageHeight] = useState("h-[400px]");
-  const [imageLoaded, setImageLoaded] = useState(false); // Added loading state
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const nextImage = () => {
-    setImageLoaded(false); // Reset loading state
+    setImageLoaded(false);
     setCurrentImageIndex(
       (prev) => (prev + 1) % (project?.screenshots?.length || 1)
     );
   };
 
   const prevImage = () => {
-    setImageLoaded(false); // Reset loading state
+    setImageLoaded(false);
     const totalImages = project?.screenshots?.length || 1;
     setCurrentImageIndex((prev) => (prev - 1 + totalImages) % totalImages);
   };
@@ -33,19 +33,19 @@ export const ProjectDialog = ({ project, isOpen, onClose }) => {
       setImageHeight("h-[400px] md:h-[450px]");
     }
 
-    setImageLoaded(true); // Mark as loaded
+    setImageLoaded(true);
   };
 
   // Reset states when image changes
   useEffect(() => {
     setImageHeight("h-[400px]");
-    setImageLoaded(false); // Reset loading state
+    setImageLoaded(false);
   }, [currentImageIndex]);
 
   // Reset image index when project changes
   useEffect(() => {
     setCurrentImageIndex(0);
-    setImageLoaded(false); // Reset loading state
+    setImageLoaded(false);
   }, [project]);
 
   // Disable body scroll when dialog is open
@@ -72,16 +72,16 @@ export const ProjectDialog = ({ project, isOpen, onClose }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }} // Faster transition
+            transition={{ duration: 0.05 }} // Ultra fast backdrop - reduced from 0.1
             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 mt-16"
             onClick={onClose}
           >
             {/* Dialog */}
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }} // Reduced initial scale for smoother animation
+              initial={{ scale: 0.98, opacity: 0 }} // Minimal scale change from 0.95
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeOut" }} // Simplified easing
+              exit={{ scale: 0.98, opacity: 0 }}
+              transition={{ duration: 0.08, ease: "easeOut" }} // Ultra fast dialog - reduced from 0.15
               className="bg-tertiary rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
               onClick={(e) => e.stopPropagation()}
             >
@@ -100,7 +100,7 @@ export const ProjectDialog = ({ project, isOpen, onClose }) => {
 
               <div className="relative mb-6">
                 <div
-                  className={`relative ${imageHeight} rounded-2xl overflow-hidden transition-all duration-300 ease-in-out bg-gray-900/20`}
+                  className={`relative ${imageHeight} rounded-2xl overflow-hidden transition-all duration-100 ease-in-out bg-gray-900/20`} // Reduced from duration-200
                 >
                   {!imageLoaded && (
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -111,11 +111,12 @@ export const ProjectDialog = ({ project, isOpen, onClose }) => {
                   <img
                     src={images[currentImageIndex] || "/placeholder.svg"}
                     alt={`${project.name} screenshot ${currentImageIndex + 1}`}
-                    className={`w-full h-full object-contain rounded-2xl transition-opacity duration-200 ${
+                    className={`w-full h-full object-contain rounded-2xl transition-opacity duration-100 ${
+                      // Reduced from duration-150
                       imageLoaded ? "opacity-100" : "opacity-0"
                     }`}
                     onLoad={handleImageLoad}
-                    loading="eager" // Load dialog images immediately
+                    loading="eager"
                   />
 
                   {/* Navigation Arrows - only show when image is loaded */}
@@ -126,7 +127,7 @@ export const ProjectDialog = ({ project, isOpen, onClose }) => {
                           e.stopPropagation();
                           prevImage();
                         }}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 z-10"
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-100 hover:scale-105 z-10" // Reduced duration and scale from duration-150 and scale-110
                         aria-label="Previous image"
                       >
                         <svg
@@ -149,7 +150,7 @@ export const ProjectDialog = ({ project, isOpen, onClose }) => {
                           e.stopPropagation();
                           nextImage();
                         }}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 z-10"
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-100 hover:scale-105 z-10" // Reduced duration and scale from duration-150 and scale-110
                         aria-label="Next image"
                       >
                         <svg

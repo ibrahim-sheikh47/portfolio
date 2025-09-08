@@ -1,16 +1,17 @@
 export const textVariant = (delay) => {
   return {
     hidden: {
-      y: -50,
+      y: -10, // Reduced from -20 for minimal movement
       opacity: 0,
     },
     show: {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        duration: 1.25,
-        delay: delay,
+        type: "tween", // Changed from spring to tween for instant response
+        duration: 0.1, // Ultra fast - reduced from 0.3
+        delay: delay || 0,
+        ease: "easeOut",
       },
     },
   };
@@ -19,8 +20,8 @@ export const textVariant = (delay) => {
 export const fadeIn = (direction, type, delay, duration) => {
   return {
     hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x: direction === "left" ? 15 : direction === "right" ? -15 : 0, // Reduced from 30 for minimal movement
+      y: direction === "up" ? 15 : direction === "down" ? -15 : 0, // Reduced from 30 for minimal movement
       opacity: 0,
     },
     show: {
@@ -28,9 +29,9 @@ export const fadeIn = (direction, type, delay, duration) => {
       y: 0,
       opacity: 1,
       transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
+        type: "tween",
+        delay: delay || 0,
+        duration: duration || 0.1, // Ultra fast - reduced from 0.2
         ease: "easeOut",
       },
     },
@@ -40,7 +41,7 @@ export const fadeIn = (direction, type, delay, duration) => {
 export const zoomIn = (delay, duration) => {
   return {
     hidden: {
-      scale: 0,
+      scale: 0.98, // Minimal scale change from 0.95
       opacity: 0,
     },
     show: {
@@ -48,8 +49,8 @@ export const zoomIn = (delay, duration) => {
       opacity: 1,
       transition: {
         type: "tween",
-        delay: delay,
-        duration: duration,
+        delay: delay || 0,
+        duration: duration || 0.08, // Ultra fast - reduced from 0.15
         ease: "easeOut",
       },
     },
@@ -59,16 +60,16 @@ export const zoomIn = (delay, duration) => {
 export const slideIn = (direction, type, delay, duration) => {
   return {
     hidden: {
-      x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-      y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
+      x: direction === "left" ? "-30%" : direction === "right" ? "30%" : 0, // Reduced from 50%
+      y: direction === "up" ? "30%" : direction === "down" ? "30%" : 0,
     },
     show: {
       x: 0,
       y: 0,
       transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
+        type: "tween",
+        delay: delay || 0,
+        duration: duration || 0.1, // Ultra fast - reduced from 0.2
         ease: "easeOut",
       },
     },
@@ -80,7 +81,7 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: staggerChildren,
+        staggerChildren: staggerChildren || 0.02, // Ultra fast stagger - reduced from 0.05
         delayChildren: delayChildren || 0,
       },
     },

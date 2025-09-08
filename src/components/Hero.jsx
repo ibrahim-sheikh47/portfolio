@@ -38,13 +38,10 @@ const Hero = () => {
       <motion.video
         aria-hidden="true"
         role="presentation"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.8 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
         autoPlay
         muted
-        loop
         playsInline
+        loop
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src={bgVideo} type="video/mp4" />

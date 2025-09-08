@@ -1,65 +1,62 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
-import github from "./github.png";
+import backend from "./backend.webp";
+import creator from "./creator.webp";
+import mobile from "./mobile.webp";
+import web from "./web.webp";
+import github from "./github.webp";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import css from "./tech/css.webp";
+import docker from "./tech/docker.webp";
+import figma from "./tech/figma.webp";
+import git from "./tech/git.webp";
+import html from "./tech/html.webp";
+import javascript from "./tech/javascript.webp";
+import mongodb from "./tech/mongodb.webp";
+import nodejs from "./tech/nodejs.webp";
+import reactjs from "./tech/reactjs.webp";
+import redux from "./tech/redux.webp";
+import tailwind from "./tech/tailwind.webp";
+import typescript from "./tech/typescript.webp";
+import threejs from "./tech/threejs.webp";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import meta from "./company/meta.webp";
+import shopify from "./company/shopify.webp";
+import starbucks from "./company/starbucks.webp";
+import tesla from "./company/tesla.webp";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import bgVideo from "./bg-video.webm";
-import bitforce from "./company/bitforce.png";
-import hashtag from "./company/hashtag.png";
-import dp from "./dpp.png";
-import qrAttendance from "./qr-attendance.png";
-import staffManagement from "./StaffManagement.png";
-import mobHome from "./mobHome.png";
-import PayrollDetail from "./PayrollDetail.png";
-import Reports from "./Reports.png";
-import qick1 from "./qick1.png";
-import qick2 from "./qick2.png";
-import qick3 from "./qick3.png";
-import qick4 from "./qick4.png";
-import qick5 from "./qick5.png";
-import qick6 from "./qick6.png";
-import salsivo from "./salsivo.png"
-import salsivo1 from "./salsivo1.png"
-import salsivo2 from "./salsivo2.png"
-import salsivo3 from "./salsivo3.png"
-import salsivo4 from "./salsivo4.png"
-import salsivo5 from "./salsivo5.png"
-import salsivo6 from "./salsivo6.png"
-import salsivo7 from "./salsivo7.png"
-import Edufe1 from "./Edufe1.png"
-import Edufe2 from "./Edufe2.png"
-import Edufe3 from "./Edufe3.png"
-import Edufe4 from "./Edufe4.png"
-import Edufe5 from "./Edufe5.png"
-import sendti from "./sendti.png"
-import realty from "./realty.png"
-import settle from "./settle.png"
+import bgVideo from "./bg-video.mp4";
+import bitforce from "./company/bitforce.webp";
+import hashtag from "./company/hashtag.webp";
+import dp from "./dpp.webp";
+import qrAttendance from "./qr-attendance.webp";
+import staffManagement from "./StaffManagement.webp";
+import mobHome from "./mobHome.webp";
+import PayrollDetail from "./PayrollDetail.webp";
+import Reports from "./Reports.webp";
+import qick1 from "./qick1.webp";
+import qick2 from "./qick2.webp";
+import qick3 from "./qick3.webp";
+import qick4 from "./qick4.webp";
+import qick5 from "./qick5.webp";
+import qick6 from "./qick6.webp";
+import salsivo from "./salsivo.webp"
+import salsivo1 from "./salsivo1.webp"
+import salsivo2 from "./salsivo2.webp"
+import salsivo3 from "./salsivo3.webp"
+import salsivo4 from "./salsivo4.webp"
+import salsivo5 from "./salsivo5.webp"
+import salsivo6 from "./salsivo6.webp"
+import salsivo7 from "./salsivo7.webp"
+import Edufe1 from "./Edufe1.webp"
+import Edufe2 from "./Edufe2.webp"
+import Edufe3 from "./Edufe3.webp"
+import Edufe4 from "./Edufe4.webp"
+import Edufe5 from "./Edufe5.webp"
+import sendti from "./sendti.webp"
+import realty from "./realty.webp"
+import settle from "./settle.webp"
 
 export {
   settle,
@@ -118,7 +115,4 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
 };
