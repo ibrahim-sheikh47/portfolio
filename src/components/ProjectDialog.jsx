@@ -116,7 +116,7 @@ export const ProjectDialog = ({ project, isOpen, onClose }) => {
                       imageLoaded ? "opacity-100" : "opacity-0"
                     }`}
                     onLoad={handleImageLoad}
-                    loading="eager"
+                    loading="lazy"
                   />
 
                   {/* Navigation Arrows - only show when image is loaded */}

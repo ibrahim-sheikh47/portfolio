@@ -41,22 +41,22 @@ import qick3 from "./qick3.webp";
 import qick4 from "./qick4.webp";
 import qick5 from "./qick5.webp";
 import qick6 from "./qick6.webp";
-import salsivo from "./salsivo.webp"
-import salsivo1 from "./salsivo1.webp"
-import salsivo2 from "./salsivo2.webp"
-import salsivo3 from "./salsivo3.webp"
-import salsivo4 from "./salsivo4.webp"
-import salsivo5 from "./salsivo5.webp"
-import salsivo6 from "./salsivo6.webp"
-import salsivo7 from "./salsivo7.webp"
-import Edufe1 from "./Edufe1.webp"
-import Edufe2 from "./Edufe2.webp"
-import Edufe3 from "./Edufe3.webp"
-import Edufe4 from "./Edufe4.webp"
-import Edufe5 from "./Edufe5.webp"
-import sendti from "./sendti.webp"
-import realty from "./realty.webp"
-import settle from "./settle.webp"
+import salsivo from "./salsivo.webp";
+import salsivo1 from "./salsivo1.webp";
+import salsivo2 from "./salsivo2.webp";
+import salsivo3 from "./salsivo3.webp";
+import salsivo4 from "./salsivo4.webp";
+import salsivo5 from "./salsivo5.webp";
+import salsivo6 from "./salsivo6.webp";
+import salsivo7 from "./salsivo7.webp";
+import Edufe1 from "./Edufe1.webp";
+import Edufe2 from "./Edufe2.webp";
+import Edufe3 from "./Edufe3.webp";
+import Edufe4 from "./Edufe4.webp";
+import Edufe5 from "./Edufe5.webp";
+import sendti from "./sendti.webp";
+import realty from "./realty.webp";
+import settle from "./settle.webp";
 
 export {
   settle,

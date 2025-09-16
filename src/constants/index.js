@@ -142,7 +142,7 @@ const experiences = [
     company_name: "BitForce Solutions, Lahore (Remote)",
     icon: bitforce, // replace with your own company logo if available
     iconBg: "#E6DEDD",
-    date: "May 2024 - May 2025",
+    date: "May 2024 - Aug 2025",
     points: [
       "Developed fully functional frontends for both web and mobile applications using React and React Native.",
       "Integrated Firebase services such as Authentication, Firestore, and Cloud Storage for seamless full-stack functionality.",
@@ -382,7 +382,7 @@ const landingPages = [
       { name: "mui", color: "blue-text-gradient" },
     ],
     image: qick2, // replace with your imported image
-    live_link: "https://edufe.netlify.app", // ✅ direct live link
+    live_link: "https://qick.netlify.app", // ✅ direct live link
   },
   {
     name: "Edufe",
