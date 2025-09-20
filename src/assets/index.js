@@ -29,7 +29,7 @@ import tesla from "./company/tesla.webp";
 import bgVideo from "./bg-video.mp4";
 import bitforce from "./company/bitforce.webp";
 import hashtag from "./company/hashtag.webp";
-import dp from "./dpp.webp";
+import dp from "./dp.png";
 import qrAttendance from "./qr-attendance.webp";
 import staffManagement from "./StaffManagement.webp";
 import mobHome from "./mobHome.webp";

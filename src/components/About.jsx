@@ -57,8 +57,9 @@ const About = () => {
         <img
           src={dp}
           alt="profile"
-          className="object-fit md:absolute md:-right-28 md:-top-56 md:h-[600px]
-             [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0))] md:order-2 order-1"
+          className="object-fit md:absolute md:-right-20 md:-top-72 md:h-[600px]
+             [mask-image:linear-gradient(to_right,rgba(0,0,0,2),rgba(0,0,0,0.01))]
+             md:order-2 order-1"
           loading="lazy"
         />
       </div>
