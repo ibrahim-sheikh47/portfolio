@@ -8,6 +8,7 @@ import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import WhatsAppFloat from './WhatsappFloat';
 
 
 export {
@@ -22,5 +23,6 @@ export {
   CanvasLoader,
   EarthCanvas,
   BallCanvas,
-  StarsCanvas
+  StarsCanvas,
+  WhatsAppFloat
 };

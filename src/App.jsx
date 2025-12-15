@@ -12,6 +12,7 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  WhatsAppFloat
 } from "./components";
 import { bgVideo } from "./assets";
 
@@ -23,6 +24,7 @@ const App = () => {
   }, []);
   return (
     <BrowserRouter>
+    <WhatsAppFloat />
       <div className="relative z-0 bg-primary">
         <Navbar />
         <div className="bg-no-repeat bg-center max-h-screen relative">
